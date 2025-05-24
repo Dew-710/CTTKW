@@ -1,0 +1,37 @@
+body {
+    background-color: #fae5cd;
+    text-align: left;
+}
+
+hr {
+    width: 80%;
+    color: #b9864c;
+}
+.right {
+    background-color: white;
+    width: 65%;
+    float: right;
+   
+}
+.left {
+    
+    float: inline-start;
+    width: 35%;
+    
+}
+h1{
+    color: #b9864c;
+}
+h3 {
+    color: #b9864c;
+}
+.nav{
+    text-align: center;
+}
+.in4 {
+    margin: 30px;
+}
+table {
+    border-spacing: 15px; 
+    border-collapse: separate;
+}
