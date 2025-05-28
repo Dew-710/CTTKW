@@ -12,9 +12,18 @@ body {
 }
 
 header {
+    z-index: 999;
+    top: -5px; 
+    overflow: hidden;   
+    position: sticky;
     background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-    padding: 10px 0;
+    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
+    padding: 10px 0%;
+    /* for navbar appearence */
+}
+#navbar {
+        height: 40px;
+    transition: 0.5s;
 }
 
 .header-flex {
