@@ -1,0 +1,91 @@
+/*When the screen is less than 1224 pixels wide */
+@media screen and (max-width: 1224px) {
+ .header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  }
+
+  .logo {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  .logo .highlight {
+    color: #1976d2;
+  }
+
+  nav {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #1976d2;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  nav a.nav-home {
+    margin: auto;
+  }
+
+  nav a.nav-auth {
+    order: 1;
+    margin-left: 0;
+  }
+
+  nav a.nav-hide {
+    display: none;
+  }
+
+}
+  
+@media screen and (max-width: 768px) {
+  .header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+  #navbar {
+    position: relative !important;
+    top: auto; 
+    transition: none; 
+  }
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 1;
+    margin-left: auto;
+  }
+  .Header_fa-bar {
+    z-index: 1;
+    font-size: 2rem;
+    display: inline-block;
+    cursor: pointer;
+  }
+  i.fa-bars {
+    transition: color 0.1s ease;
+  }
+  i.fa-bars:active {
+    color: #1976d2;
+  }
+  nav a.nav-home,
+  nav a.nav-auth {
+    display: none;
+  }
+}
