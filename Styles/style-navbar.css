@@ -1,4 +1,4 @@
-.container {
+#navbar .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -9,7 +9,7 @@
     left: 0;
     right: 0;
     height: 40px;
-    z-index: 999;
+    z-index: 1;
     transition: top 0.3s;    
     overflow: hidden;   
     background: #fff;
@@ -17,27 +17,27 @@
     padding: 10px 0%;
 }
 
-.header-flex {
+#navbar .header-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
 }
-.logo {
+#navbar .logo {
     position: relative;
     font-size: 2rem;
     font-weight: 700;
     color: #222;
     flex: 1;
 }
-.logo .highlight {
+#navbar .logo .highlight {
     color: #1976d2;
 }
-.Header_open-home ,
-.Header_global-auth {
+#navbar .Header_open-home ,
+#navbar .Header_global-auth {
     display: inline-block;
 }
-nav a {
+#navbar nav a {
     text-decoration: none;
     color: #1976d2;
     font-weight: 500;
@@ -46,34 +46,34 @@ nav a {
     padding: 8px 12px;
     display: inline-block;
 }
-nav a:hover {
+#navbar nav a:hover {
     color: #174e8c;
 }
-.Header_fa-bar {
+#navbar .Header_fa-bar {
     display: none;
     border-radius: 10px;
 }
-.Header_fa-bar {
+#navbar .Header_fa-bar {
     display: none;
     border-radius: 10px;
 }
-nav a.nav-home {
+#navbar nav a.nav-home {
     order: 1;
     text-align: left;
 }
-nav a.nav-auth {
+#navbar nav a.nav-auth {
     order: 2;
     text-align: right;
     border-radius: 10px;
     transition: all 0.4s ease;
     transition: box-shadow 0.1s ease;
 }
-nav a.nav-auth:hover {
+#navbar nav a.nav-auth:hover {
     font-weight: 500;
     background: linear-gradient(90deg, #068ceb 0%, #65b8d9 100%);
     color:#f1f7fa;
     box-shadow: 0 1px 5px rgba(0,0,0,0.5);
 }
-nav a.nav-hide {
+#navbar nav a.nav-hide {
   display: inline-block;
 }
