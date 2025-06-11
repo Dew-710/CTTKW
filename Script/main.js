@@ -1,6 +1,10 @@
 let lastscrollTop = 0;
 let navbar;
 let scrollHandlerAttached = false;
+let sidebar;
+let sidebarbtn;
+let closesidebarbtn;
+let overlay;
 
 function handleScroll() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -28,7 +32,6 @@ function updateScrollBehavior() {
 function setUpScrollHideNavbar() {
   navbar = document.getElementById("navbar");
   if (!navbar) {
-    console.warn("Navbar not found!");
     return;
   }
 
@@ -36,6 +39,7 @@ function setUpScrollHideNavbar() {
   window.addEventListener("resize", updateScrollBehavior); // React to changes
 }
 document.addEventListener("DOMContentLoaded", setUpScrollHideNavbar);
+
 function includeHTML(callback) {
   const elements = document.querySelectorAll('[include-html]');
   let remaining = elements.length;
@@ -66,4 +70,53 @@ function includeHTML(callback) {
     }
   });
 }
-includeHTML(setUpScrollHideNavbar);
+function setupShowHideSidebar() {
+  sidebar = document.querySelector(".sidebar");
+  sidebarbtn = document.getElementById("sidebar-btn");
+  closesidebarbtn = document.getElementById("close-sidebar-btn");
+  overlay = document.getElementById("overlay");
+  if (!sidebar || !sidebarbtn || !closesidebarbtn || !overlay){
+    return;
+  }
+  sidebarbtn.addEventListener("click", () => {
+    openSidebar();
+  });
+
+  closesidebarbtn.addEventListener("click", () => {
+    closeSidebar();
+  });
+
+  overlay.addEventListener("click", () => {
+    closeSidebar();
+  })
+  handleResize();
+}
+function openSidebar() {
+  sidebar.classList.remove("inactive");
+  sidebar.classList.add("active");
+  overlay.classList.add("active");
+}
+function closeSidebar() {
+  sidebar.classList.remove("active");
+  sidebar.classList.add("inactive");
+  overlay.classList.remove("active");
+}
+function handleResize() {
+  if (window.innerWidth >= 768) {
+    sidebar.classList.add("inactive");
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+  } else {
+    sidebar.classList.remove("inactive");
+  }
+}
+window.addEventListener("resize", () => {
+  handleResize();
+})
+document.addEventListener("DOMContentLoaded", () => {
+  includeHTML(() => {
+    setUpScrollHideNavbar();
+    setupShowHideSidebar();
+    handleResize();
+  }); 
+});

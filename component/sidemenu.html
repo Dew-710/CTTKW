@@ -6,14 +6,15 @@
     <title>Document</title>
     <link href="../Styles/style-sidebar.css" rel="stylesheet">
     <link href="https://boxicons.com/icons/home?w=thin&s=rounded">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="sidebar">
         <header>
             <div class="header-flex">
                 <div class="Header_fa-bar_0j1K">
-                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-bars" id="close-sidebar-btn"></i>
                 </div>
                 <div class="logo">
                     <span>CV<span class="highlight">Online</span></span>
@@ -26,7 +27,32 @@
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a href="#">
-                            <i class="bxr bx-home" style="color:#000000;">
+                            <i class="icon fa-solid fa-house"></i>
+                            <span class="text nav-text">Trang chủ</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="icon fa-solid fa-file"></i>
+                            <span class="text nav-text">Tạo CV</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="icon fa-regular fa-folder-open"></i>
+                            <span class="text nav-text">Mẫu CV</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="icon fa-solid fa-info"></i>
+                            <span class="text nav-text">Hướng dẫn</span>
+                        </a>
+                    </li>
+                    <li class="nav-link auth-nav">
+                        <a href="#">
+                            <i class="icon fa-solid fa-arrow-up-right-from-square"></i>
+                            <span class="text nav-text auth-nav-text">Đăng nhập / Đăng ký</span>
                         </a>
                     </li>
                 </ul>
