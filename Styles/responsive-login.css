@@ -1,0 +1,85 @@
+@media screen and (max-width: 832px) {
+    .overlay-container {
+        opacity: 0;
+        pointer-events: none;
+    }
+    .container {
+        width: 80%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .container
+    form {
+        padding: 0;
+    }
+    form h1 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 500;
+        margin: 0;
+    }
+    .form-container {
+        width: 100%;
+    }
+    .float-container {
+        border: solid 1px #ccc;
+        margin-bottom: 8px;
+        padding: 0 8px;
+        width: 80%;
+        border-radius: 10px;
+        height: 50px;
+    }
+    .goback-main .goback-text {
+        visibility: visible;
+        opacity: 1;
+    }
+    .goback-main a:hover {
+        .icon {
+            transform: rotate(180deg);
+        }
+    }
+    button.switch_to_signup {
+        padding: 10px 30px;
+    }
+    button#switch_to_signup {
+        background-color: transparent;
+        color: #ff5252;
+    }
+    button#switch_to_signin {
+        padding: 10px 30px;   
+    }
+    button#switch_to_signin {
+        background-color: transparent;
+        color: #ff5252;
+    }
+    .switch-signup-container {
+        opacity: 1;
+        height: 0;
+        pointer-events: auto;
+    }
+    .switch-signin-container {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .container.switch_to_signup {
+        .sign-in-container {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .sign-up-container {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    } 
+    .container.switch_to_signin {
+        .sign-up-container {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .sign-in-container {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}

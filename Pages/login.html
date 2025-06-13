@@ -5,16 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/login.css">
+    <link rel="stylesheet" href="../Styles/login-hover.scss">
+    <link rel="stylesheet" href="../Styles/responsive-login.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Form login unitop.vn</title>
 </head>
 <body>
-    <h2 id="tieuDe">Sign in/up</h2>
+
     <div class="container" id="container">
+        <div class="goback goback-main">
+                <a href="/index.html" class="goback-link">
+                    <i class="icon fa-regular fa-square-caret-left"></i>
+                    <span class="goback-text">Trở về trang chủ</span>
+                </a>
+        </div>
         <div class="form-container sign-up-container">
             <form action="#">
-                <h1>Create Account</h1>
+                <h1>Tạo tài khoản</h1>
                 
                 <div id="floatContainer1" class="float-container ">
                     <label for="floatField1 ">Tài Khoản</label>
@@ -28,12 +36,16 @@
                     <label for="floatField1 ">Mật Khẩu</label>
                     <input type="text" id="floatField1" >
                 </div>
-                <button>Sign Up</button>
+                <button>Đăng ký</button>
+                <div class="switch-signin-container">
+                    <p>Đã có tài khoản?</p>
+                    <button id="switch_to_signin">Đăng nhập</button>
+                </div>
             </form>
         </div>
         <div class="form-container sign-in-container">
             <form action="#">
-                <h1>Sign in</h1>
+                <h1>Đăng nhập</h1>
                 <div id="floatContainer1" class="float-container ">
                     <label for="floatField1 ">Tài Khoản</label>
                     <input type="text" id="floatField1" >
@@ -42,41 +54,31 @@
                     <label for="floatField1 ">Mật Khẩu</label>
                     <input type="text" id="floatField1" >
                 </div>
-                <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
+                <button>Đăng nhập</button>
+                <a href="#" id="forget-password">Quên mật khẩu?</a>
+                <div class="switch-signup-container">
+                    <p>Chưa có tài khoản?</p>
+                    <button id="switch_to_signup">Đăng ký</button>
+                </div>
             </form>
         </div>
         <div class="overlay-container">
-            <div class="overlay">
+            <div class="sub-overlay">
                 <div class="overlay-panel overlay-left">
                     <h1>Welcome Back!</h1>
                     <p>To keep connected with us please login with your personal info</p>
-                    <button class="ghost" id="signIn">Sign In</button>
+                    <button class="ghost" id="signIn">Đăng nhập</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
+                    <h1>Chào bạn!</h1>
+                    <p>Hãy đăng ký tài khoản và đồng hành cùng chúng tôi</p>
+                    <button class="ghost" id="signUp">Đăng ký</button>
                 </div>
             </div>
         </div>
     </div>
-     
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="js/app.js"></script>
-  <script>
-        const signUpButton = document.getElementById('signUp');
-        const signInButton = document.getElementById('signIn');
-        const container = document.getElementById('container');
-
-        signUpButton.addEventListener('click', () => {
-            container.classList.add('right-panel-active');
-        });
-
-        signInButton.addEventListener('click', () => {
-            container.classList.remove('right-panel-active');
-        });
-        
-    </script>
+<script src="../Script/main.js"></script>
+<script src="../Script/helper.js"></script>
 </html>
