@@ -60,9 +60,11 @@ a {
     border-radius: 10px;
     .nav-text {
         color:#f1f7fa;
+        text-shadow: 1px 2px 1px#1f2326;
     }
     i.icon {
         color: azure;
+        text-shadow: 1px 2px 1px#1f2326;
     }
 }
 

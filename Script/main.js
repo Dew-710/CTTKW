@@ -5,6 +5,9 @@ let sidebar;
 let sidebarbtn;
 let closesidebarbtn;
 let overlay;
+let gobackbutton;
+let toggleColorgobackbtnSignUp;
+let toggleColorgobackbtnSignIn;
 
 function handleScroll() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -95,11 +98,13 @@ function openSidebar() {
   sidebar.classList.remove("inactive");
   sidebar.classList.add("active");
   overlay.classList.add("active");
+  document.body.classList.add("no-scroll");
 }
 function closeSidebar() {
   sidebar.classList.remove("active");
   sidebar.classList.add("inactive");
   overlay.classList.remove("active");
+  document.body.classList.remove("no-scroll");
 }
 function handleResize() {
   if (!sidebar || !overlay) return;
@@ -111,8 +116,27 @@ function handleResize() {
     sidebar.classList.remove("inactive");
   }
 }
+function toggleColorGoBackBtn() {
+  gobackbutton = document.querySelector('.goback-main');
+  toggleColorgobackbtnSignUp = document.getElementById('signUp');
+  toggleColorgobackbtnSignIn = document.getElementById('signIn');
+  if (gobackbutton && toggleColorgobackbtnSignUp) {
+    toggleColorgobackbtnSignUp.addEventListener("click", () => {
+      gobackbutton.classList.add('switch_to_signup');
+    toggleColorgobackbtnSignIn.addEventListener("click", () => {
+      gobackbutton.classList.remove('switch_to_signup');
+    })
+    });
+  }
+  else {
+    return;
+  }
+}
 window.addEventListener("resize", () => {
   handleResize();
+})
+document.addEventListener("DOMContentLoaded", () => {
+  toggleColorGoBackBtn();
 })
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML(() => {
