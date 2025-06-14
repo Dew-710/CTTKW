@@ -12,7 +12,7 @@ let toggleColorgobackbtnSignIn;
 function handleScroll() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   if (scrollTop > lastscrollTop) {
-    navbar.style.top = "-60px";
+    navbar.style.top = "-100px";
   } else {
     navbar.style.top = "0";
   }

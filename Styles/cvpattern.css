@@ -1,0 +1,66 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+    color: #222;
+}
+body.no-scroll {
+    overflow: hidden;
+}
+.overlay {
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    z-index: 2;
+    visibility: hidden;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.container-preview {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.preview-template-col {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    min-width: 800px;
+}
+/*==========*/
+.export-cv-form-col {
+    display: flex;
+    padding-top: 100px;
+    min-width: 360px;
+}
+.action-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    gap: 5px;
+}
+.action-box {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    h2 {
+        font-size: 1.4rem;
+        color: rgb(57, 57, 252);
+    }
+}
+.form-check-action {
+    
+}
+.form-check-action {
+
+}
+/*==========*/
+.cv-container {
+    border: 1px solid salmon;
+}   
