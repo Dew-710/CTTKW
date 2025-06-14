@@ -13,12 +13,12 @@
     <link href="../Styles/style-sidebar.css" rel="stylesheet">
     <link href="https://boxicons.com/icons/home?w=thin&s=rounded">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    
+    <link href="../Styles/overlay.css" rel="stylesheet">
 </head>
 <body>
     <div include-html="../component/navbar.html"></div>
     <div include-html="../component/sidemenu.html"></div>
-    <div class="container">
+    <div class="get-in4-container">
         <h2>Form điền thông tin CV nâng cao</h2>
         <form>
             <fieldset>
@@ -99,6 +99,7 @@
             <button type="submit">Gửi thông tin</button>
         </form>
     </div>
+    <div class="overlay" id="overlay"></div>
     <script>
         function previewAvatar(event) {
             const file = event.target.files[0];

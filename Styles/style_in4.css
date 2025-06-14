@@ -1,36 +1,36 @@
 body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f7fafd;
-            margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7fafd;
+    margin: 0;
+    padding: 0;
+ }
+.get-in4-container {
+    background: #fff;
+    max-width: 700px;
+    margin: 32px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(44,62,80,0.12);
+    padding: 32px 40px 24px 40px;
+    }
+h2 {
+    text-align: center;
+    color: #2d3e50;
+    letter-spacing: 1px;
+}
+fieldset {
+    border: none;
+    margin-bottom: 24px;
             padding: 0;
-        }
-        .container {
-            background: #fff;
-            max-width: 700px;
-            margin: 32px auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(44,62,80,0.12);
-            padding: 32px 40px 24px 40px;
-        }
-        h2 {
-            text-align: center;
-            color: #2d3e50;
-            letter-spacing: 1px;
-        }
-        fieldset {
-            border: none;
-            margin-bottom: 24px;
-            padding: 0;
-        }
-        legend {
-            font-size: 1.15em;
-            font-weight: bold;
-            color: #1abc9c;
-            margin-bottom: 14px;
-        }
-        label {
-            display: block;
-            margin-top: 14px;
+}
+legend {
+    font-size: 1.15em;
+    font-weight: bold;
+    color: #1abc9c;
+    margin-bottom: 14px;
+}
+label {
+    display: block;
+    margin-top: 14px;
             margin-bottom: 6px;
             color: #34495e;
             font-weight: 500;
@@ -61,24 +61,24 @@ body {
         .two-col > div {
             flex: 1;
         }
-        button {
-            background: linear-gradient(90deg, #1abc9c, #3498db);
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            padding: 14px 0;
-            width: 100%;
-            font-size: 1.1em;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 20px;
-            box-shadow: 0 4px 12px rgba(52,152,219,0.13);
-            transition: background 0.2s;
+button {
+    background: linear-gradient(90deg, #1abc9c, #3498db);
+    color: #fff;
+     border: none;
+    border-radius: 6px;
+    padding: 14px 0;
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(52,152,219,0.13);
+    transition: background 0.2s;
         }
-        button:hover {
+button:hover {
             background: linear-gradient(90deg, #16a085, #2980b9);
         }
-        .avatar-preview {
+.avatar-preview {
             margin-top: 8px;
             width: 60px;
             height: 60px;
@@ -87,19 +87,19 @@ body {
             display: none;
             border: 2px solid #1abc9c;
         }
-        a {
+a {
   text-decoration: none;
 }
         
         /* Responsive */
         @media (max-width: 1224px) {
-            .container {
+            .get-in4-container {
                 max-width: 95vw;
-                padding: 18px 6vw 18px 6vw;
+                padding: 35px 6vw 18px 6vw;
             }
         }
         @media (max-width: 768px) {
-            .container {
+            .get-in4-container {
                 padding: 7vw 2vw 16vw 2vw;
             }
             h2 {
@@ -111,7 +111,7 @@ body {
             }
         }
         @media (max-width: 415px) {
-            .container {
+            .get-in4-container {
                 padding: 3vw 0vw 8vw 0vw;
             }
             label {
