@@ -22,6 +22,9 @@
   #navbar .logo .highlight {
     color: #1976d2;
   }
+  a {
+  text-decoration: none;
+}
 
   #navbar nav {
     display: flex;

@@ -102,6 +102,7 @@ function closeSidebar() {
   overlay.classList.remove("active");
 }
 function handleResize() {
+  if (!sidebar || !overlay) return;
   if (window.innerWidth >= 768) {
     sidebar.classList.add("inactive");
     sidebar.classList.remove("active");

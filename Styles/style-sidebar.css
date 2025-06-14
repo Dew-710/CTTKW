@@ -38,6 +38,9 @@
         font-size: 1.2rem !important;
     }   
 }
+a {
+  text-decoration: none;
+}
 
 .sidebar .country-code {
     position: absolute;

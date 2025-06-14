@@ -83,6 +83,9 @@ main section:not(:last-child) {
 a .fab {
   color: white;
 }
+a {
+  text-decoration: none;
+}
 
 .course, .skills {
   display: -ms-flexbox;

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Online - Trang chính</title>
+    <link rel="stylesheet" href="../Styles/style_in4.css">
+    <link rel="stylesheet" href="../Styles/style-navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../Styles/responsive-navbar.css" rel="stylesheet">
+    <link href="../Styles/style-sidebar.css" rel="stylesheet">
+    <link href="https://boxicons.com/icons/home?w=thin&s=rounded">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+</head>
+<body>
+    <div include-html="../component/navbar.html"></div>
+    <div include-html="../component/sidemenu.html"></div>
+    <div class="container">
+        <h2>Form điền thông tin CV nâng cao</h2>
+        <form>
+            <fieldset>
+                <legend>Thông tin cá nhân</legend>
+                <div class="two-col">
+                    <div>
+                        <label for="fullname">Họ và tên *</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    <div>
+                        <label for="avatar">Ảnh đại diện</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/*" onchange="previewAvatar(event)">
+                        <img id="avatarImg" class="avatar-preview" alt="Avatar Preview">
+                    </div>
+                </div>
+                <div class="two-col">
+                    <div>
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="phone">Số điện thoại *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <label for="address">Địa chỉ liên lạc</label>
+                <input type="text" id="address" name="address">
+                <label for="birthday">Ngày sinh</label>
+                <input type="date" id="birthday" name="birthday">
+                <div class="two-col">
+                    <div>
+                        <label for="gender">Giới tính</label>
+                        <select id="gender" name="gender">
+                            <option value="">-- Chọn --</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                            <option value="Khác">Khác</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="website">Website cá nhân</label>
+                        <input type="url" id="website" name="website" placeholder="VD:https://dewjunior.id.vnvn">
+                    </div>
+                </div>
+                <label for="social">Mạng xã hội (LinkedIn, Facebook...)</label>
+                <input type="text" id="social" name="social" placeholder="VD: https://linkedin.com/in/dew-0710">
+            </fieldset>
+            <fieldset>
+                <legend>Giới thiệu & Mục tiêu</legend>
+                <label for="intro">Giới thiệu bản thân</label>
+                <textarea id="intro" name="intro" rows="3" placeholder="Giới thiệu ngắn gọn về bản thân..."></textarea>
+                <label for="objective">Mục tiêu nghề nghiệp</label>
+                <textarea id="objective" name="objective" rows="2" placeholder="Mục tiêu nghề nghiệp ngắn và dài hạn..."></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Kỹ năng & Sở thích</legend>
+                <label for="skills">Kỹ năng chuyên môn</label>
+                <textarea id="skills" name="skills" rows="2" placeholder="VD: Lập trình web, Giao tiếp, Làm việc nhóm..."></textarea>
+                <label for="softskills">Kỹ năng mềm</label>
+                <textarea id="softskills" name="softskills" rows="2" placeholder="VD: Lãnh đạo, Giải quyết vấn đề..."></textarea>
+                <label for="hobbies">Sở thích</label>
+                <input type="text" id="hobbies" name="hobbies" placeholder="VD: Đọc sách, Du lịch, Chạy bộ...">
+            </fieldset>
+            <fieldset>
+                <legend>Học vấn & Chứng chỉ</legend>
+                <label for="education">Học vấn</label>
+                <textarea id="education" name="education" rows="3" placeholder="Trường, chuyên ngành, thời gian học..."></textarea>
+                <label for="certs">Chứng chỉ</label>
+                <textarea id="certs" name="certs" rows="2" placeholder="Tên chứng chỉ, nơi cấp, thời gian..."></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Kinh nghiệm & Dự án</legend>
+                <label for="experience">Kinh nghiệm làm việc</label>
+                <textarea id="experience" name="experience" rows="4" placeholder="Công ty, vị trí, thời gian, mô tả công việc..."></textarea>
+                <label for="projects">Dự án tiêu biểu</label>
+                <textarea id="projects" name="projects" rows="3" placeholder="Tên dự án, vai trò, mô tả ngắn gọn..."></textarea>
+            </fieldset>
+            <button type="submit">Gửi thông tin</button>
+        </form>
+    </div>
+    <script>
+        function previewAvatar(event) {
+            const file = event.target.files[0];
+            const img = document.getElementById('avatarImg');
+            if (file && file.type.startsWith('image/')) {
+                img.src = URL.createObjectURL(file);
+                img.style.display = 'block';
+            } else {
+                img.style.display = 'none';
+                img.src = '';
+            }
+        }
+    </script>
+    
+    <script src="../Script/main.js"></script>
+    
+</body>
+</html>

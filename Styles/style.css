@@ -34,6 +34,9 @@
     text-align: center;
     margin-right: 20px;
 }
+a {
+  text-decoration: none;
+}
 .circle.circle--large {
     width: 60px;
     height: 60px;

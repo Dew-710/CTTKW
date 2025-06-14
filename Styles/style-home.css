@@ -63,6 +63,9 @@ body {
 .btn-primary:hover {
     background: #1565c0;
 }
+a {
+  text-decoration: none;
+}
 
 .features {
     background: #fff;

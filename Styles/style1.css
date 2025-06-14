@@ -35,6 +35,9 @@
         font-size: xxx-large;
         margin:0px 0 5px ;
     }
+    a {
+  text-decoration: none;
+}
     .name .specialize{
         margin:0;
         font-weight: bold;
