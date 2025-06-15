@@ -13,21 +13,21 @@
     <link href="../Styles/responsive-navbar.css" rel="stylesheet">
     <link href="../Styles/style-sidebar.css" rel="stylesheet">
     <link href="../Styles/overlay.css" rel="stylesheet">
+    <link href="../Styles/responsive-cvpattern.css" rel="stylesheet">
     <link href="https://boxicons.com/icons/home?w=thin&s=rounded">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <div include-html="../component/navbar.html"></div>
     <div include-html="../component/sidemenu.html"></div>
-    <script src="../Script/main.js"></script>
     <div class="overlay" id="overlay"></div>
-    <div class="container container-preview">
+    <section class="container container-preview">
         <div class="preview-template-col">
             <h1 class="title-preview">
                 Mẫu CV đơn giản
             </h1>
             <div class="col-9 cv-container">
-                <iframe></iframe>
+                <iframe id="sample-cv" scrolling="auto"></iframe>
             </div>
         </div>
         <div class="export-cv-form-col">
@@ -54,7 +54,14 @@
                 <button type="button" class="export-cv-btn btn btn-primary">Xuất CV</button>
             </div>
         </div>
-    </div>
+    </section>
     <div class="overlay" id="overlay"></div>
+    <footer>
+        <div class="container">
+            <span>&copy; 2025 CV Online. All rights reserved.</span>
+        </div>
+    </footer>    
+    <script src="../Script/main.js"></script>
+    <script src="../Script/cvpattern.js"></script>
 </body>
 </html>
